@@ -20,6 +20,9 @@ const fontWeight = "bold"
 const textCase = "uppercase"
 
 import '../styles/global.css';
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import Social from '../components/Social.astro'
 ---
 
 <html lang="en">
@@ -40,11 +43,9 @@ import '../styles/global.css';
                 text-transform: var(--textCase);
             }
         </style>
+        <Header />
 	</head>
 	<body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
 		<h1>{pageTitle}</h1>
         <p>Here are a few facts about me:</p>
         <ul>
@@ -63,5 +64,7 @@ import '../styles/global.css';
         {happy && <p>I am happy to be learning Astro!</p>}
         {finished && <p>I finished this tutorial!</p>}
         {goal == 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days...</p>}
+        <Social platform="linkedin" username="hassan-s-215726187/"/>
+        <Footer />
 	</body>
 </html>
